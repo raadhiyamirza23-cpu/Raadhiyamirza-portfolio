@@ -1,0 +1,73 @@
+// script.js
+// Handles the "Leave a recommendation" form and the confirmation popup.
+// showPopup() is defined but is only ever CALLED from the form's submit
+// handler below — it never runs on page load, on input, or anywhere else.
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  var form = document.getElementById('rec-form');
+  var recList = document.getElementById('rec-list');
+  var popupOverlay = document.getElementById('popup-overlay');
+  var popupClose = document.getElementById('popup-close');
+
+  // Reveals the confirmation popup. This function does nothing until it is
+  // explicitly invoked — it is not attached to page load or any other event.
+  function showPopup() {
+    popupOverlay.hidden = false;
+    // move focus into the dialog for accessibility
+    popupClose.focus();
+  }
+
+  function hidePopup() {
+    popupOverlay.hidden = true;
+  }
+
+  // Adds the new recommendation to the visible list on the page.
+  function addRecommendationToPage(name, role, text) {
+    var item = document.createElement('li');
+
+    var quote = document.createElement('p');
+    quote.textContent = '"' + text + '"';
+
+    var cite = document.createElement('cite');
+    cite.textContent = '— ' + name + ', ' + role;
+
+    item.appendChild(quote);
+    item.appendChild(cite);
+    recList.appendChild(item);
+  }
+
+  form.addEventListener('submit', function (event) {
+    // Stop the browser's default full-page form submission.
+    event.preventDefault();
+
+    var name = document.getElementById('rec-name').value.trim();
+    var role = document.getElementById('rec-role').value.trim();
+    var text = document.getElementById('rec-text').value.trim();
+
+    // Only treat this as a successful submission if all fields are filled in.
+    // showPopup() is only reached on this success path — never on a failed
+    // or incomplete submission.
+    if (!name || !role || !text) {
+      return;
+    }
+
+    addRecommendationToPage(name, role, text);
+    form.reset();
+
+    // The recommendation was successfully submitted — now, and only now,
+    // trigger the popup.
+    showPopup();
+  });
+
+  popupClose.addEventListener('click', hidePopup);
+
+  // Optional: clicking outside the popup box also closes it,
+  // but this never opens the popup — only closes it.
+  popupOverlay.addEventListener('click', function (event) {
+    if (event.target === popupOverlay) {
+      hidePopup();
+    }
+  });
+
+});

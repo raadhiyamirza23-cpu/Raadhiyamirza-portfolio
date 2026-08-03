@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — The Record</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="catalog" aria-label="Primary">
+  <a href="#top" class="brand-name" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'}); return false;">Raadhiya</a>
+  <div class="catalog-links">
+    <a href="#about"><span class="idx">01</span>About Me</a>
+    <a href="#skills"><span class="idx">02</span>Skills</a>
+    <a href="#projects"><span class="idx">03</span>Project Details</a>
+    <a href="#recommendations"><span class="idx">04</span>Recommendations</a>
+    <button class="home-tab" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'})" aria-label="Return to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 11l9-8 9 8"/>
+        <path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<header class="masthead" id="top">
+  <p class="eyebrow">Personal Record — Est. 2026</p>
+  <h1 class="name">Raadhiya</h1>
+  <p class="tagline">Historian by training, developer in progress — building software with the same discipline once spent reading archives.</p>
+</header>
+
+<main>
+
+  <section class="record" id="about">
+    <div class="record-tab">Record 01 · About Me</div>
+    <div class="record-body about-grid">
+      <div class="profile-row">
+        <div class="profile-avatar" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="100" height="100">
+            <circle cx="50" cy="50" r="49" fill="#2f6f4e"/>
+            <text x="50" y="63" font-family="Source Serif 4, serif" font-size="42" font-weight="700" fill="#f2e9d5" text-anchor="middle">R</text>
+          </svg>
+        </div>
+        <div class="profile-text">
+          <p>Hi, I'm <strong>Raadhiya</strong> — I started out studying History with a minor in Economics, spending years reading primary sources, building arguments from evidence, and tracing how systems change over time. That same discipline is what drew me to development: code is just another kind of record, one that has to be precise, well-structured, and built to last.</p>
+          <p>I'm currently completing the IBM Full Stack JavaScript Developer program, and I'm looking for entry-level developer or IT-adjacent roles — including contract and outsourced project work — where I can keep building while I grow.</p>
+        </div>
+      </div>
+      <ul class="credential-list">
+        <li>B.A. in History, Economics minor</li>
+        <li>IBM Full Stack JavaScript Developer — in progress</li>
+        <li>Elocution Certificate</li>
+        <li>NSS Certificate — Volunteer, 2024–2026</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="record" id="skills">
+    <div class="record-tab">Record 02 · Skills</div>
+    <div class="record-body">
+      <div class="skill-grid">
+
+        <div class="skill-card">
+          <div class="skill-logo" style="color:#e34c26">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.29l.336 4.172L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+          </div>
+          <h3 class="skill-title">HTML5</h3>
+          <div class="skill-bar"><span style="width:70%"></span></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-logo" style="color:#264de4">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.437L1.5 0zm17.09 4.413L5.41 4.41l.401 4.435h9.98l-.35 3.938-3.436.936-3.421-.939-.219-2.442H4.795l.408 4.574L12 16.375l6.796-1.94.31-3.472H5.427l-.4-4.435h13.943l.62-6.03z"/></svg>
+          </div>
+          <h3 class="skill-title">CSS3</h3>
+          <div class="skill-bar"><span style="width:65%"></span></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-logo" style="color:#f0db4f">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+          </div>
+          <h3 class="skill-title">JavaScript</h3>
+          <div class="skill-bar"><span style="width:55%"></span></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-logo" style="color:#61dafb">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85-1.03 0-1.87-.85-1.87-1.85 0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9a22.7 22.7 0 0 1-2.4-.36c-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9c-.6 0-1.17 0-1.71.03-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03.6 0 1.17 0 1.71-.03.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72M12 17.22c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59.72M16.62 4c-.62-.38-2 .2-3.59 1.7.52.59 1.03 1.23 1.51 1.9.82.08 1.63.2 2.4.36.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86-.27-.06-.57-.11-.88-.16l.3.51m1.45 7.09c.63-.35.82-1.82.31-3.96-.77.16-1.58.28-2.4.36-.48.67-.99 1.31-1.51 1.9 1.59 1.5 2.97 2.08 3.6 1.7M18.5 12c.83-.83 1.5-1.95 1.5-2.5 0-.55-.67-1.67-1.5-2.5-.83.83-1.5 1.95-1.5 2.5 0 .55.67 1.67 1.5 2.5M5.5 12c-.83.83-1.5 1.95-1.5 2.5 0 .55.67 1.67 1.5 2.5.83-.83 1.5-1.95 1.5-2.5 0-.55-.67-1.67-1.5-2.5M12 24a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+          </div>
+          <h3 class="skill-title">React</h3>
+          <div class="skill-bar"><span style="width:35%"></span></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-logo" style="color:#3c873a">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.275-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24"/></svg>
+          </div>
+          <h3 class="skill-title">Node.js</h3>
+          <div class="skill-bar"><span style="width:30%"></span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="record" id="projects">
+    <div class="record-tab">Record 03 · Project Details</div>
+    <div class="record-body">
+      <div class="project-list">
+        <div class="project-item">
+          <span class="project-num">01</span>
+          <div>
+            <h3>Weather Now — Live Forecast App</h3>
+            <p>A weather lookup app that pulls live conditions and a 5-day forecast for any city using a public weather API, with a clean, mobile-friendly layout.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span></div>
+          </div>
+        </div>
+        <div class="project-item">
+          <span class="project-num">02</span>
+          <div>
+            <h3>Movie Explorer</h3>
+            <p>A movie search and discovery app that lets users browse titles, view ratings and synopses, and save favorites, built on a public movie database API.</p>
+            <div class="project-tags"><span>JavaScript</span><span>API</span><span>React</span></div>
+          </div>
+        </div>
+        <div class="project-item">
+          <span class="project-num">03</span>
+          <div>
+            <h3>This Portfolio Website</h3>
+            <p>A single-page responsive portfolio — the one you're viewing now — built from scratch with semantic HTML, custom CSS, and vanilla JavaScript for the interactive recommendation form.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="record" id="recommendations">
+    <div class="record-tab">Record 04 · Recommendations</div>
+    <div class="record-body">
+      <blockquote class="rec">
+        <p>"Raadhiya brought the same rigor to her coursework that she once brought to historical research — she double-checks everything and never turns in sloppy work."</p>
+        — Meera Krishnan, IBM Course Instructor
+      </blockquote>
+      <blockquote class="rec">
+        <p>"Working with Raadhiya on our NSS volunteer projects, I saw firsthand how organized and dependable she is under deadline pressure."</p>
+        — Arjun Rao, NSS Program Coordinator
+      </blockquote>
+      <blockquote class="rec">
+        <p>"Her presentation skills stood out immediately — clear, confident, and well-structured. That elocution training really shows."</p>
+        — Sunitha Reddy, Elocution Trainer
+      </blockquote>
+
+      <ul id="rec-list" class="rec-list-dynamic"></ul>
+
+      <form id="rec-form" class="rec-form" novalidate>
+        <h3 class="rec-form-title">Leave a recommendation</h3>
+        <div class="rec-form-row">
+          <label for="rec-name">Name</label>
+          <input type="text" id="rec-name" name="rec-name" required>
+        </div>
+        <div class="rec-form-row">
+          <label for="rec-role">Role</label>
+          <input type="text" id="rec-role" name="rec-role" required>
+        </div>
+        <div class="rec-form-row">
+          <label for="rec-text">Recommendation</label>
+          <textarea id="rec-text" name="rec-text" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="rec-submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Raadhiya — Built while learning full stack development.
+</footer>
+
+<div id="popup-overlay" class="popup-overlay" hidden>
+  <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+    <h3 id="popup-title">Thank you!</h3>
+    <p>Your recommendation has been submitted.</p>
+    <button id="popup-close" class="popup-close">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
